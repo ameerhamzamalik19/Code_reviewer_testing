@@ -12,7 +12,7 @@ class DatabaseManager:
         self.is_connected = False
         self.last_sync_time = None
 
-    def connect(self) -> str:
+    async def connect(self) -> str:
         """Changes the connection state to true."""
         self.is_connected = True
         return f"Successfully connected to database: '{self.db_name}' as user '{self.db_user}'."
